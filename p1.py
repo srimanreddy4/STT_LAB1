@@ -32,14 +32,14 @@ def calculator():
     print("5. Exit")
 
     while True:
-        choice = input("\nEnter your choice (1-5): ")   
+        choice = input("\nEnter your choice (1-5): ")
         if choice == '5':
             print("Exiting the calculator. Goodbye!")
             break
         if choice in ['1', '2', '3', '4']:
             try:
                 num1 = float(input("Enter the first number: "))
-                num2 = float(input("Enter the second number: ")) 
+                num2 = float(input("Enter the second number: "))
                 if choice == '1':
                     print(f"The result is: {add(num1, num2)}")
                 elif choice == '2':
