@@ -1,19 +1,28 @@
+"""
+This module implements a basic calculator with a menu-driven interface.
+It supports addition, subtraction, multiplication, and division.
+"""
+
 def add(a, b):
+    """Return the sum of a and b."""
     return a + b
 
 def subtract(a, b):
+    """Return the difference of a and b."""
     return a - b
 
 def multiply(a, b):
+    """Return the product of a and b."""
     return a * b
 
 def divide(a, b):
+    """Return the division of a by b. Handle division by zero."""
     if b != 0:
         return a / b
-    else:
-        return "Division by zero is not allowed."
+    return "Division by zero is not allowed."
 
 def calculator():
+    """Run the calculator menu and perform operations based on user input."""
     print("Welcome to the Calculator!")
     print("Choose an operation:")
     print("1. Addition")
@@ -23,17 +32,14 @@ def calculator():
     print("5. Exit")
 
     while True:
-        choice = input("\nEnter your choice (1-5): ")
-        
+        choice = input("\nEnter your choice (1-5): ")   
         if choice == '5':
             print("Exiting the calculator. Goodbye!")
             break
-        
         if choice in ['1', '2', '3', '4']:
             try:
                 num1 = float(input("Enter the first number: "))
-                num2 = float(input("Enter the second number: "))
-                
+                num2 = float(input("Enter the second number: ")) 
                 if choice == '1':
                     print(f"The result is: {add(num1, num2)}")
                 elif choice == '2':
